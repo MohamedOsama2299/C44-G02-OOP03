@@ -1,232 +1,141 @@
-﻿using InterfaceDemo.Interface_ex1;
-using InterfaceDemo.Interface_EX2;
-using InterfaceDemo.interface_ex3;
+﻿using InterfaceDemo.Question_02;
+using InterfaceDemo.Question01;
+using System;
+using System.Data;
+using System.Net;
+using System.Runtime.Intrinsics.X86;
+using System.Threading.Channels;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace InterfaceDemo
+namespace Assugnment_3
 {
     internal class Program
     {
-        //static void Print10Numbers(SeriesByTwo series )
-        //{
-        //    {
-        //        for(int i = 0; i < 10; i++)
-        //        {
-        //            Console.WriteLine(series.Current);
-        //            series.Next();
-        //        }
-        //        Console.WriteLine();
-        //        series.Reset();
-        //    }
-
-        //}
-        //static void Print10Numbers(SeriesByThree series )
-        //{
-        //    {
-        //        for(int i = 0; i < 10; i++)
-        //        {
-        //            Console.WriteLine(series.Current);
-        //            series.Next();
-        //        }
-        //        Console.WriteLine();
-        //        series.Reset();
-        //    }
-
-        //}
-        //static void Print10Numbers(Iseries series)
-        //{
-        //    {
-        //        for (int i = 0; i < 10; i++)
-        //        {
-        //            Console.WriteLine(series.Current);
-        //            series.Next();
-        //        }
-        //        Console.WriteLine();
-        //        series.Reset();
-        //    }
-
-        //}
         static void Main(string[] args)
         {
-            ////    ////interface :Reference type
-            ////    ////Code Contract Between Developer who write it and the developer who use it [Implemntation]
-            ////    ////IMtype myType = new MyType();
-            ////    ////NOTE :Yoy can not create opject from any  interface
-            ////    ////MyType myType=new MyType();
-            ////    ////myType.salary = 12000;
-            ////    ////Console.WriteLine(myType.salary);
-            ////    ////myType.Myfun();
-            ////    ////IMyType mytype1=new IMyType();
-            ////    ////mytype1.Myfun();
-            ////    //IMyType mytype;
-            ////    ////Ref -->Can Refer to object From Any Class Whicth Implemnted the interface "IMType"
-            ////    //mytype = new MyType();
-            ////    //mytype.salary = 12000;
-            ////    //Console.WriteLine(mytype.salary);
-            ////    //mytype.Myfun();
-            ////    //mytype.print();
-            ////    //SeriesByTwo seriesbytwo= new SeriesByTwo();
-            ////    //Print10Numbers(seriesbytwo);
-            ////    //SeriesByThree seriesByThree = new SeriesByThree();
-            ////    //Print10Numbers(seriesByThree);
+            //What is the primary purpose of an interface in C#?
+            //a) To provide a way to implement multiple inheritance
+            //b) To define a blueprint for a class
+            //c) To declare abstract methods and properties
+            //d) To create instances of objects
+            //Answer(b);
+            //---------------------------------------------------------------------------------------//
+            //            Question 2:
+            //Which of the following is NOT a valid access modifier for interface members in C#?
+            //a) private
+            //b) protected
+            //c) internal
+            //d) public
+            //Answer(a);
+            //---------------------------------------------------------------------------------------------//
+            //            Question 3:
+            //Can an interface contain fields in C#?
+            //a) Yes
+            //b) No
+            //c) Only if they are static
+            //d) Only if they are read only
+            //Answer(b);
+            //---------------------------------------------------------------------------------------------//
+            //            Question 4:
+            //In C#, can an interface inherit from another interface?
+            //a) No, interfaces cannot inherit from each other
+            //b) Yes, interfaces can inherit from multiple interfaces
+            //c) Yes, but only if they have the same methods
+            //d) Only if the interfaces are in the same namespace
+            //Answer (b);
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //            Question 5:
+            //Which keyword is used to implement an interface in a class in C#?
+            //a) inherit
+            //b) use
+            //c) extends
+            //d) implements
+            //Answer (d);
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //            Question 6:
+            // Can an interface contain static methods in C#?
+            //a) Yes
+            //b) No
+            //c) Only if the interface is sealed
+            //d) Only if the methods are private
+            //Answer(a)
+            //---------------------------------------------------------------------------------------------//
+            //            Question 7:
+            //In C#, can an interface have explicit access modifiers for its members?
+            //a) Yes, for all members
+            //b) No, all members are implicitly public
+            //c) Yes, but only for abstract members
+            //d) Only if the interface is sealed
+            //Answer(b)
+            //---------------------------------------------------------------------------------------------//
+            //            Question 8:
+            //What is the purpose of an explicit interface implementation in C#?
+            //a) To hide the interface members from outside access
+            //b) To provide a clear separation between interface and class members
+            //c) To allow multiple classes to implement the same interface
+            //d) To speed up method resolution
+            //Answer(a)
+            //---------------------------------------------------------------------------------------------//
+            //            Question 9:
+            //In C#, can an interface have a constructor?
+            //a) Yes, but it must be private
+            //b) No, interfaces cannot have constructors
+            //c) Yes, but only if the interface is sealed
+            //d) Only if the constructor is static
+            //Answer(b)
+            //---------------------------------------------------------------------------------------------//
+            //            Question 10:
+            //How can a C# class implement multiple interfaces?
+            //a) By using the "implements" keyword
+            //b) By using the "extends" keyword
+            //c) By separating interface names with commas
+            //d) A class cannot implement multiple interfaces
+            //Answer(c)
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //                                             Part 02
+            //Question 01:
+            //Define an interface named IShape with a property Area and a method DisplayShapeInfo.Create two interfaces, ICircle and IRectangle, that inherit from IShape.Implement these interfaces in classes Circle and Rectangle. Test your implementation by creating instances of both classes and displaying their shape information.
+            //Circle circle = new Circle();
+            //   circle.Radius = 5;
+            //   circle.CalculateArea();
+            //   circle.DisplayShapeInfo();
+            //   Rectangle rectangle = new Rectangle();
+            //   Console.WriteLine();
+            //   rectangle.Length = 10;
+            //   rectangle.Width = 5;
+            //   rectangle.CalculateArea();
+            //   rectangle.DisplayRectangleInfo();
+            //----------------------------------------------------------------------------------------------------------------------//
+            //            Question 02:
+            //In this example, we start by defining the IAuthenticationService interface with two methods: AuthenticateUser and AuthorizeUser.The BasicAuthenticationService class implements this interface and provides the specific implementation for these methods.
+            //In the BasicAuthenticationService class, the AuthenticateUser method compares the provided username and password with the stored credentials.It returns true if the user is authenticated and false otherwise.The AuthorizeUser method checks if the user with the given username has the specified role.It returns true if the user is authorized and false otherwise.
+            //In the Main method, we create an instance of the BasicAuthenticationService class and assign it to the authService variable of type IAuthenticationService.We then call the AuthenticateUser and AuthorizeUser methods using this interface reference.
+            //This implementation allows you to switch the authentication service implementation easily by creating a new class that implements the IAuthenticationService interface and providing the desired logic for authentication and authorization.
+            //IAuthenticationService authService = new BasicAuthenticationService();
+            //Console.Write("Enter Username: ");
+            //string username = Console.ReadLine();
+            //Console.Write("Enter Password: ");
+            //string password = Console.ReadLine();
+            //authService.AuthenticateUser(username, password);
+            //Console.Write("Enter Role: ");
+            //string role = Console.ReadLine();
+            //authService.AuthorizeUser(username, role);
 
-
-
-            ////    //int[]numbers = { 7,8,5,3,2,1,9 };
-            ////    //Array.Sort(numbers);
-            ////    //foreach (int item in numbers)
-            ////    //{
-            ////    //    Console.WriteLine(item);
-            ////    //        //}   
-
-            ////    //        Employee[] employees = new Employee[3]
-            ////    //        {
-            ////    //new Employee { ID=1,Name = "Ahmed", Salary = 12000, Age = 30 },
-            ////    //new Employee { ID=2,Name = "Ali", Salary = 15000, Age = 25 },
-            ////    //new Employee {ID=3, Name = "Sara", Salary = 18000, Age = 28 }
-            ////    //       };
-            ////    //        Array.Sort(employees);
-            ////    //        foreach (Employee item in employees)
-            ////    //        {
-            ////    //            Console.WriteLine(item);
-            ////    //        }
-            ////    //--------------------------------------------------------------------------//
-            ////    //Car car = new Car();
-            ////    //car.speed = 100;
-            ////    //car.Forward();
-            ////    //AirPlane airPlane = new AirPlane();
-            ////    //IMoveable moveable = airPlane; 
-            ////    //moveable.Forward();
-
-            ////---------------------------------------------------------------------------//
-            ////shallow copy Vs deep copy
-            ////int[] Arr01 = { 1, 2, 3 };
-            ////int[] Arr02= { 4,5,6 };
-            ////Console.WriteLine(Arr01.GetHashCode());
-            ////Console.WriteLine(Arr02.GetHashCode());
-
-            ////  Arr02 = Arr01; //shallow copy
-            //////Copy Identity
-            //////{1,2,3}-->Has two References Arr01 and Arr02  
-            //////{ 4,5,6 } -->unReachable Object
-            ////Console.WriteLine();
-            ////Console.WriteLine(Arr01.GetHashCode());
-            ////Console.WriteLine(Arr02.GetHashCode());
-
-            //////Identity  (Address)+Object State [Data]
-            ////Arr02[0] = 100;
-            //////Console.WriteLine(Arr01[0]);
-            //////--------------------------------------------------------------//
-            ////int[] Arr01 = { 1, 2, 3 };
-            ////int[] Arr02 = { 4, 5, 6 };
-            ////Console.WriteLine(Arr01.GetHashCode());
-            ////Console.WriteLine(Arr02.GetHashCode());
-
-            ////Arr02 = (int[])Arr01.Clone(); //deep copy
-            //////Clone Method will copy the opject  state of the caller
-            //////ASssign the new Opject to Arr02,will generate new identity  
-            ////////Copy Identity
-            ////////{1,2,3}-->Has two References Arr01 and Arr02  
-            ////////{ 4,5,6 } -->unReachable Object
-            //////Console.WriteLine();
-            //////Console.WriteLine(Arr01.GetHashCode());
-            //////Console.WriteLine(Arr02.GetHashCode());
-
-            //////Identity  (Address)+Object State [Data]
-            ////Arr02[0] = 100;
-            ////Console.WriteLine(Arr01[0]);
-
-            ////---------------------------------------------------------------------------//
-            //////--------------------------------------------------------------//
-            ////string[] Arr01 = { "Ahmed", "Ali", "Omar"};
-            ////string[] Arr02 = { "Ziad", "Adel", "Amr" };
-            ////Arr01 = Arr02;
-            ////Console.WriteLine(Arr01.GetHashCode());
-            ////Console.WriteLine(Arr02.GetHashCode());
-
-            ////Arr02[0] = "Mohamed";
-            ////Console.WriteLine(Arr01[0]);
-
-
-            ////Arr02 = (string[])Arr01.Clone(); //deep copy
-            ////Clone Method will copy the opject  state of the caller
-            ////ASssign the new Opject to Arr02,will generate new identity  
-            //////Copy Identity
-            //////{1,2,3}-->Has two References Arr01 and Arr02  
-            //////{ 4,5,6 } -->unReachable Object
-            ////Console.WriteLine();
-            ////Console.WriteLine(Arr01.GetHashCode());
-            ////Console.WriteLine(Arr02.GetHashCode());
-
-            //string[] Arr01 = { "Ahmed", "Ali", "Omar" };
-            //string[] Arr02 = { "Ziad", "Adel", "Amr" };
-            //Arr01 = (string[])Arr02.Clone();
-            //Console.WriteLine(Arr01.GetHashCode());
-            //Console.WriteLine(Arr02.GetHashCode());
-            //Arr02[0] = "Mohamed";
-            //Console.WriteLine(Arr01[0]);
-
-            //---------------------------------------------------------------------------//
-            //Employee E01 = new Employee
-            //{
-            //    ID = 1,
-            //    Name = "Ahmed",
-            //    Age = 30,
-            //    Salary = 12000
-            //};
-            //Employee E02= new Employee
-            //{
-            //    ID = 2,
-            //    Name = "Amr",
-            //    Age = 25,
-            //    Salary = 15000
-            //};
-            //E01= E02; //Shallow Copy
-            //Console.WriteLine(E01);
-            //Console.WriteLine(E02);
-
-            //Console.WriteLine(E01.GetHashCode());
-            //Console.WriteLine(E02.GetHashCode());
-
-            //E01 =(Employee)E02.Clone();
-            //Console.WriteLine();
-            //Console.WriteLine(E01);
-            //Console.WriteLine(E02); 
-            //Console.WriteLine(E01.GetHashCode());
-            //Console.WriteLine(E02.GetHashCode());
-
-            //---------------------------------------------------------------------------//
-            //Employee[] employees = new Employee[3]
-            //            {
-            //    new Employee { ID=1,Name = "Ahmed", Salary = 12000, Age = 30 },
-            //    new Employee { ID=2,Name = "Ali", Salary = 15000, Age = 25 },
-            //    new Employee {ID=3, Name = "Sara", Salary = 18000, Age = 28 }
-            //           };
-            //Array.Sort(employees);
-            ////int x = employees[0].CompareTo(employees[1]);
-            //////+ :Caller is greater than the parameter
-            //////- :Caller is less than the parameter
-            //////0 :Caller is equal to the parameter   
-            //Array.Sort(employees);
-            //foreach (Employee item in employees)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //-----------------------------------------------------------------------------//
-            Employee[] employees = new Employee[3]
-                       {
-                new Employee { ID=1,Name = "Ahmed", Salary = 12000, Age = 30 },
-                new Employee { ID=2,Name = "Ali", Salary = 15000, Age = 25 },
-                new Employee {ID=3, Name = "Sara", Salary = 18000, Age = 28 }
-                      };
-            Array.Sort(employees, new EmployeeCompareSalary());
-            
-            Array.Sort(employees);
-            foreach (Employee item in employees)
-            {
-                Console.WriteLine(item);
-            }
+            //---------------------------------------------------------------------------------------------//
+            //            Question 03:
+// we define the INotificationService interface with a method SendNotification that takes a recipient and a message as parameters.
+//We then create three classes: EmailNotificationService, SmsNotificationService, and PushNotificationService, which implement the INotificationService interface.
+//In each implementation, we provide the logic to send notifications through the respective communication channel:
+//The EmailNotificationService class simulates sending an email by outputting a message to the console.
+//The SmsNotificationService class simulates sending an SMS by outputting a message to the console.
+//The PushNotificationService class simulates sending a push notification by outputting a message to the console.
+//In the Main method, we create instances of each notification service class and call the SendNotification method with sample recipient and message values.
+//This implementation allows you to easily switch between different notification channels by creating new classes that implement the INotificationService interface and provide the specific logic for each channel.
+  
 
 
         }
-    }
+
+}
 }
