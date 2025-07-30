@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace InterfaceDemo.interface_ex3
+{
+    internal interface IMoveable
+    {
+     int speed { get; set; }
+        void Forward();
+        void Backward();
+        void Left();
+        void Right();
+    }
+}
